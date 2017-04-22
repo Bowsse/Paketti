@@ -46,18 +46,7 @@ else {
 
 echo "<div><a href='supervisor_thesis.php?thesisID=$thesisID' class='content'>Thesis Information</a> ";
 echo "<a href='supervisor_thesis_status.php?thesisID=$thesisID' class='content'>Thesis status</a>";
-/*
-$grade = $db->query("SELECT * FROM Grade WHERE Thesis_thesisID = '".$thesisID."' AND Person_personID =  '".$_SESSION['username']."'");
-if(isset($grade))
-{
-		$noRows = $grade->rowCount();
 
-	if ($noRows > 0)
-	{
-		echo " <a href='supervisor_thesis_grade.php?thesisID=$thesisID' class='content'>Thesis review</a>";
-	}
-}
-*/
 $grade = getGrade($_SESSION['username'], $thesisID);
 
 	if (!empty($grade))

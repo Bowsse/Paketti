@@ -1,2 +1,0 @@
-# Paketti
-siistipaketti

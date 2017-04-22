@@ -312,7 +312,7 @@ SQLEND;
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':thesisID', $thesisID, PDO::PARAM_STR);
     $stmt->execute();
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+    return $stmt;
 }
 
 ?>
